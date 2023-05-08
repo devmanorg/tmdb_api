@@ -26,5 +26,5 @@ if __name__ == '__main__':
     films_amount = 1000
     print('please, wait, this operation may take smth like 15-20 minutes')
     all_films = load_films(user_api_key, films_amount)
-    with open(path='MyFilmDB.json', mode='w', encoding='utf-8') as my_file:
-        json.dump(all_films, my_file)
+    with open('MyFilmDB.json', mode='w', encoding='utf-8') as my_file:
+        json.dump(all_films, my_file, ensure_ascii=False)
